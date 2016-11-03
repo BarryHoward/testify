@@ -8,6 +8,8 @@ class GildedRose {
   tick () {
     if (this.name === "Aged Brie"){
       this.agedBrie();
+    } else if (this.name ==="Sulfuras, Hand of Ragnaros"){
+      this.quality = 80;
     } else {
       this.normal();
     }
