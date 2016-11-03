@@ -20,7 +20,6 @@ class GildedRose {
 
   }
 
-
   normal () {
     this.sellIn=this.sellIn-1;
     if (this.quality>0){
@@ -78,8 +77,5 @@ class GildedRose {
   }
 
 }
-
-var foo = new GildedRose();
-foo.normal()
 
 export { GildedRose };
