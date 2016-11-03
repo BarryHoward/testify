@@ -10,6 +10,8 @@ class GildedRose {
       this.agedBrie();
     } else if (this.name ==="Sulfuras, Hand of Ragnaros"){
       this.quality = 80;
+    } else if (this.name ==="Conjured Mana Cake"){
+      this.conjured();
     } else {
       this.normal();
     }
@@ -44,6 +46,17 @@ class GildedRose {
       }
   }
 
+  conjured(){
+    this.sellIn=this.sellIn-1;
+    if (this.quality>0){
+      if (this.sellIn<0){
+        var qualityChange = -4;
+      } else {
+        var qualityChange = -2;
+      }
+      this.quality=this.quality + qualityChange;
+    }
+  }
 
 }
 
