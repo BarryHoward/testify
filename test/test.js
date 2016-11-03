@@ -30,7 +30,7 @@ describe('Fizzbuzz returns values for different kinds of numbers', function () {
     assert.equal(result, "fizzbuzz");
   });
 
-  // Your Tests Here
+
 });
 
 // UNCOMMENT THE SECTION BELOW FOR HARD MODE

@@ -16,6 +16,4 @@ function fizzBuzz (start, end) {
   }
 };
 
-
-
-export { fizz, fizzBuzz};
+export { fizz };
