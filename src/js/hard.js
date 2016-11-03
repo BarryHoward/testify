@@ -12,6 +12,8 @@ class GildedRose {
       this.quality = 80;
     } else if (this.name ==="Conjured Mana Cake"){
       this.conjured();
+    } else if (this.name === "Backstage passes to a TAFKAL80ETC concert"){
+      this.backstage();
     } else {
       this.normal();
     }
@@ -34,16 +36,14 @@ class GildedRose {
   agedBrie(){
     this.sellIn=this.sellIn-1;
     if (this.sellIn<0){
-        var qualityChange = 2;
-      } else {
-        var qualityChange = 1;
-      }
-
-      if ((this.quality + qualityChange)>50){
-        this.quality = 50;
-      } else {
-        this.quality=this.quality + qualityChange;
-      }
+      var qualityChange = 2;
+    } else {
+      var qualityChange = 1;
+    }
+    this.quality=this.quality + qualityChange;
+    if (this.quality>50){
+      this.quality=50;
+    }
   }
 
   conjured(){
@@ -55,6 +55,25 @@ class GildedRose {
         var qualityChange = -2;
       }
       this.quality=this.quality + qualityChange;
+    }
+  }
+
+  backstage(){
+    this.sellIn=this.sellIn-1;
+    if (this.sellIn<0){
+      this.quality = 0;
+    } else {
+      if (this.sellIn<5){
+        var qualityChange = 3;
+      } else if (this.sellIn<10){
+        var qualityChange = 2;
+      } else {
+        var qualityChange = 1;
+      }
+      this.quality = this.quality + qualityChange;
+      if (this.quality>50){
+        this.quality =50;
+      }
     }
   }
 
