@@ -25,6 +25,11 @@ describe('Fizzbuzz returns values for different kinds of numbers', function () {
     assert.equal(result, "buzz");
   });
 
+  it('should return "fizzbuzz" for multiples of 15', function () {
+    let result = fizz(30);
+    assert.equal(result, "fizzbuzz");
+  });
+
   // Your Tests Here
 });
 
